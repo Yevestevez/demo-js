@@ -3,7 +3,11 @@
 const a = 3;
 
 function cube(a) {
-    return a * a * a;
+    const result = a * a * a;
+    return result;
 }
 
 console.log(cube(a)); // 27
+
+const cubeArrow = () => a * a * a;
+console.log(cubeArrow(a)); // 27
