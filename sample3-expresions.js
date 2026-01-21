@@ -61,8 +61,8 @@ console.log(c); // 2
 
 // Coerción de booleans
 
-// Falsies --> Coerción a false (cuando le pides al valor que se convierta en boolean = false)
-// Trueties --> Coerción a true (cuando le pides al valor que se convierta en boolean = true)
+// Falsy --> Coerción a false (cuando le pides al valor que se convierta en boolean = false)
+// Truthy --> Coerción a true (cuando le pides al valor que se convierta en boolean = true)
 console.log(Boolean(22)); // true
 console.log(Boolean('string')); // true
 console.log(Boolean({})); // true
