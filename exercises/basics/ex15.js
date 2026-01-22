@@ -1,6 +1,6 @@
 // 15. Crea una función que reciba un número por parámetros e imprima por consola si el número recibido es un número primo.
 
-const num = 6;
+const num = 7;
 
 // while
 function isPrime(num) {
@@ -48,3 +48,20 @@ function isPrime2(num) {
 }
 
 console.log('for:', isPrime2(num));
+
+// for (boolean)
+function isPrime3(n) {
+    let result = true;
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) {
+            // result = false;
+            // break;
+            return false;
+        }
+    }
+    return result;
+}
+
+console.log(
+    `for (boolean): el número ${num} ${isPrime3(num) ? 'es primo' : 'no es primo'}`,
+);
