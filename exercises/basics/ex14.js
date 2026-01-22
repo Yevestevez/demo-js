@@ -9,7 +9,7 @@ const multiplicationTable = (num) => {
 
     while (i <= 10) {
         // result += num * i;
-        result += `${num}*${i} = ${num * i}
+        result += `${num} x ${i} = ${num * i}
         `;
         i++;
     }
@@ -27,7 +27,7 @@ function multiplicationTable2(num) {
 
     for (let i = 0; i <= 10; i++) {
         // result += num * i;
-        result += `${num}*${i} = ${num * i}
+        result += `${num} x ${i} = ${num * i}
         `;
     }
 
@@ -37,3 +37,17 @@ function multiplicationTable2(num) {
 console.log(`
     Tabla de multiplicar del ${num} (for):
         ${multiplicationTable2(num)}`);
+
+// for con array
+function multiplicationTable3(num) {
+    let result = [];
+    for (let i = 0; i <= 10; i++) {
+        const m = num * i;
+        const message = `${num} x ${i} = ${m}`;
+        result[result.length] = message;
+    }
+    return result;
+}
+
+const table = multiplicationTable3(8);
+console.table(table); // console.table te saca una tabla por consola
