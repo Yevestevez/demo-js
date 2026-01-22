@@ -2,34 +2,60 @@
 
 const text = 'pizza';
 
-// Con bucle while
-function revertText1(text) {
-    let reversedText = ''; // declarar variable asignando un string vacío
+// Con bucle while i--
+function reverse(text) {
+    let result = ''; // declarar variable asignando un string vacío
     let i = text.length - 1; // declarar índice asígnando la longitud del string -1, ya que empieza a contar en el cero
 
     // condición: mientas el índice sea mayor o igual que cero (para incluir la primera letra del string)
     while (i >= 0) {
         // result = result + text[i];
-        reversedText += text[i]; // guarda la letra en la posición del índice en la variable result. Igual que
-
+        result += text[i]; // guarda la letra en la posición del índice en la variable result. Igual que
         i--; // retrocede a la posición anterior del string
     }
 
-    return reversedText;
+    return result;
 }
 
-console.log(`while: [${text}] al revés es [${revertText1(text)}]`);
+console.log(`while (i--): [${text}] al revés es [${reverse(text)}]`);
 
-// Con bucle for
+// Con bucle while i++
+function reverse2(text) {
+    let result = '';
+    let i = 0;
 
-function revertText2(text) {
-    let reversedText = '';
-
-    for (let i = text.length - 1; i <= 0; i--) {
-        reversedText += text[i];
+    while (i < text.length) {
+        result = text[i] + result;
+        i++;
     }
 
-    return reversedText;
+    return result;
 }
 
-console.log(`for: [${text}] al revés es [${revertText1(text)}]`);
+console.log(`while (i++): [${text}] al revés es [${reverse2(text)}]`);
+
+// Con bucle for i--
+function reverse3(text) {
+    let result = '';
+
+    for (let i = text.length - 1; i >= 0; i--) {
+        result += text[i];
+    }
+
+    return result;
+}
+
+console.log(`for (i--): [${text}] al revés es [${reverse3(text)}]`);
+
+// Con bucle for -> i++
+function reverse4(text) {
+    let result = '';
+
+    for (let i = 0; i < text.length; i++) {
+        result = text[i] + result;
+    }
+
+    return result;
+}
+
+console.log(`for (i++): [${text}] al revés es [${reverse4(text)}]`);
