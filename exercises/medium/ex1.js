@@ -5,8 +5,8 @@
     function removeFirstLast(text = '') {
         let result = '';
         let arrayLetters = text.split(''); // Convierte de string a array
-        arrayLetters.pop();
-        arrayLetters.shift();
+        arrayLetters.pop(); // .poo elimina el último elemento de un array
+        arrayLetters.shift(); // .shifr elimina el primer elemento de un array
         result = arrayLetters.join(''); // Convierte de array a string
         return result;
     }
