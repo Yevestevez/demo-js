@@ -2,26 +2,23 @@
 
 const word = 'abecedario';
 
-{
-    // strings
-    const vowelsCount = (word) => {
-        let result = 0;
+const vowelsCount = (word) => {
+    let result = 0;
 
-        for (let i = 0; i < word.length; i++) {
-            let letter = word[i];
-            if (
-                letter === 'a' ||
-                letter === 'e' ||
-                letter === 'i' ||
-                letter === 'o' ||
-                letter === 'u'
-            ) {
-                result += 1;
-            }
+    for (let i = 0; i < word.length; i++) {
+        let letter = word[i];
+        if (
+            letter === 'a' ||
+            letter === 'e' ||
+            letter === 'i' ||
+            letter === 'o' ||
+            letter === 'u'
+        ) {
+            result += 1;
         }
+    }
 
-        return result;
-    };
+    return result;
+};
 
-    console.log(`La palabra ${word} tiene ${vowelsCount(word)} vocales.`);
-}
+console.log(`La palabra ${word} tiene ${vowelsCount(word)} vocales.`);

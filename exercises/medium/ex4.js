@@ -2,23 +2,19 @@
 
 const text = 'abcdefghijklmnñopqrstuvwxyz';
 
-{
-    const isPangram = (text) => {
-        const alphabet = 'abcdefghijklmnñopqrstuvwxyz';
-        const normalized = text.toLowerCase();
+const isPangram = (text) => {
+    const alphabet = 'abcdefghijklmnñopqrstuvwxyz';
+    const normalizedText = text.toLowerCase();
 
-        for (let i = 0; i < alphabet.length; i++) {
-            if (!normalized.includes(alphabet[i])) {
-                return false;
-            }
+    for (let i = 0; i < alphabet.length; i++) {
+        if (!normalizedText.includes(alphabet[i])) {
+            return false;
         }
+    }
 
-        return true;
-    };
+    return true;
+};
 
-    console.log(
-        isPangram(text)
-            ? `${text} es un pangrama`
-            : `${text} no es un pangrama`,
-    );
-}
+console.log(
+    isPangram(text) ? `${text} es un pangrama` : `${text} no es un pangrama`,
+);
